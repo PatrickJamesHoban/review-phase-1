@@ -8,10 +8,11 @@ class RoadTrip
   def initialize(args)
     @name = args[:name]
     @segments = args[:segments]
+    p segments
   end
 
   def add_segment(new_segment)
-    new_segment.to_s
+    new_segment.to_a
     new_segment.each do |segment|
       puts segment
       @segments << segment
@@ -19,4 +20,13 @@ class RoadTrip
     segments
   end
 
+  def segments_test
+    puts segments
+  end
+
 end
+
+# trip = RoadTrip.new(name: 'Trip to SF', segments: segments)
+# trip.segments_test
+
+
