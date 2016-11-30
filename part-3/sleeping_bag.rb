@@ -1,4 +1,10 @@
+require_relative 'rent'
+require_relative 'reserve'
+
 class SleepingBag
+  include Rent
+  include Reserve
+
   attr_reader :style, :size, :shell
 
   def initialize(args = {})
@@ -7,31 +13,6 @@ class SleepingBag
     @shell = args.fetch(:shell) { "nylon" }
   end
 
-  def reserve
-    @reserved = true
-  end
+  # Pulled out all common methods across sleeping_bag, tent, and water_bottle and stored in modules instead.
 
-  def end_reservation
-    @reserved = false
-  end
-
-  def reserved?
-    @reserved
-  end
-
-  def available?
-    !reserved?
-  end
-
-  def damaged?
-    @damaged
-  end
-
-  def record_damage
-    @damaged = true
-  end
-
-  def repair
-    @damaged = false
-  end
 end
