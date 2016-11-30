@@ -7,7 +7,7 @@ class RoadTrip
 
   def initialize(args)
     @name = args[:name]
-    @segments = args[:segments]
+    @segments = args.fetch(:segments) { Array.new }
     p segments
   end
 
