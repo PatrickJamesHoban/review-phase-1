@@ -19,6 +19,7 @@ describe SockDrawer do
   end
 
   it "has a matcher" do
+    puts drawer.matcher
     expect(drawer.matcher).to eq matcher
   end
 

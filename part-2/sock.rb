@@ -1,3 +1,5 @@
+
+
 class Sock
   attr_reader :brand, :style, :color
 

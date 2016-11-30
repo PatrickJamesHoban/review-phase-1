@@ -1,4 +1,10 @@
+require_relative 'reserve'
+require_relative 'assign'
+
 class Campsite
+  include Reserve
+  include Assign
+
   attr_reader :location, :square_footage
   attr_accessor :assigned_employee
 
@@ -17,23 +23,26 @@ class Campsite
     @water
   end
 
-  def reserve
-    @reserved = true
-  end
+  # def reserve
+  #   @reserved = true
+  # end
 
-  def end_reservation
-    @reserved = false
-  end
+  # def end_reservation
+  #   @reserved = false
+  # end
 
-  def reserved?
-    @reserved
-  end
+  # def reserved?
+  #   @reserved
+  # end
 
-  def available?
-    !reserved?
-  end
+  # def available?
+  #   !reserved?
+  # end
 
-  def assigned?
-    !!@assigned_employee
-  end
+  # def assigned?
+  #   !!@assigned_employee
+  # end
+
+  #Removed a bunch more, just didn't comment them out, cut and paste instead as I got a little too hurried.
+
 end

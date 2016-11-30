@@ -1,6 +1,9 @@
+
 class SockMatcher
   def match?(sock, other_sock)
     return false if sock.equal? other_sock
+    p sock
+    p other_sock
     return false unless socks? [sock, other_sock]
     matching_attributes?(sock, other_sock)
   end

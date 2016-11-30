@@ -1,4 +1,4 @@
-class Artist
+cclass Artist
   attr_reader :name, :artworks
 
   def initialize(args = {})
