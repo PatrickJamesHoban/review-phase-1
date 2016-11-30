@@ -1,3 +1,4 @@
+
 class Segment
 
   attr_reader :origin, :destination, :miles
@@ -7,5 +8,6 @@ class Segment
     @destination = args[:destination]
     @miles = args[:miles]
   end
+
 
 end
