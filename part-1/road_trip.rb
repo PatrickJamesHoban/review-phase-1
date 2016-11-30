@@ -8,21 +8,22 @@ class RoadTrip
   def initialize(args)
     @name = args[:name]
     @segments = args.fetch(:segments) { Array.new }
-    p segments
+    # p segments
   end
 
   def add_segment(new_segment)
-    new_segment.to_a
-    new_segment.each do |segment|
-      puts segment
-      @segments << segment
-    end
-    segments
+    # p new_segment.to_s
+    # new_segment.to_a
+    # new_segment.each do |i|
+    #   puts i
+    segment_collection = []
+    segment_collection << new_segment
+    segment_collection
   end
 
-  def segments_test
-    puts segments
-  end
+  # def segments_test
+  #   puts segments
+  # end
 
 end
 
