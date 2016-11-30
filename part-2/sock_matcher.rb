@@ -1,3 +1,4 @@
+
 class SockMatcher
   def match?(sock, other_sock)
     return false if sock.equal? other_sock
